@@ -3,6 +3,9 @@
 # Compiler
 JC = javac
 
+# JAR
+JAR = jar
+
 # Flags
 JFLAGS = -g
 
@@ -15,6 +18,9 @@ OUTDIR = out
 # Main class
 MAIN = Main
 
+# JAR file
+JARFILE = taskmanager.jar
+
 # Targets
 all: compile run
 
@@ -25,7 +31,13 @@ compile:
 run:
 	java -cp $(OUTDIR) $(MAIN)
 
-clean:
-	rm -rf $(OUTDIR)
+jar: compile
+	$(JAR) cfe $(JARFILE) $(MAIN) -C $(OUTDIR) .
 
-.PHONY: all compile run clean
+jar-run: jar
+	java -jar $(JARFILE)
+
+clean:
+	rm -rf $(OUTDIR) $(JARFILE)
+
+.PHONY: all compile run jar jar-run clean
