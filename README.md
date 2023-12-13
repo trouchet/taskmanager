@@ -13,7 +13,7 @@ This is a simple Java project that demonstrates a basic task management system. 
 1. **Compile the Code:**
 
     ```bash
-    make
+    make compile
     ```
 
     This will compile the Java source files and create the `out/` directory.
