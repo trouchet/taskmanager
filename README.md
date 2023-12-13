@@ -26,16 +26,32 @@ This is a simple Java project that demonstrates a basic task management system. 
 
     This will execute the compiled Java program.
 
-3. **Clean Up:**
+3. **Create JAR File:**
 
-    To remove the compiled files, run:
+    ```bash
+    make jar
+    ```
+
+    This will create a JAR file named `taskmanager.jar` in your project directory.
+
+4. **Run the Program from JAR:**
+
+    ```bash
+    make jar-run
+    ```
+
+    This will create the JAR file (if not already created) and run the program from the JAR file.
+
+5. **Clean Up:**
+
+    To remove the compiled files and the JAR file, run:
 
     ```bash
     make clean
     ```
+
 ## Notes
 
 - The project assumes that the Java Development Kit (JDK) is installed on your system.
 
 Feel free to modify the code and adapt it to your needs!
-
